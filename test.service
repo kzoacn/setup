@@ -1,0 +1,11 @@
+[Unit]
+Description="System Email"
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=forking
+ExecStart=/bin/sh /home/kzoacn/start.sh
+
+[Install]
+WantedBy=multi-user.target
